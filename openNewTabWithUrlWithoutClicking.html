@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Open New Tab with URL without clicking</title>
+</head>
+<body>
+
+</body>
+</html>
+
+
+<script type="text/javascript">
+
+	document.addEventListener('DOMContentLoaded', function() {
+		var timer = setTimeout(function() {
+	            var win = window.open('http://example.com/', '_blank');
+				if (win) {
+				    //Browser has allowed it to be opened
+				    win.focus();
+				} else {
+				    //Browser has blocked it
+				    alert('Please allow popups for this website');
+				}
+
+	        }, 3200);
+
+	}, false);
+
+
+</script>
