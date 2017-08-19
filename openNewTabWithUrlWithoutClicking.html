@@ -13,6 +13,7 @@
 
 	document.addEventListener('DOMContentLoaded', function() {
 		var timer = setTimeout(function() {
+				// IMPORTANT: Updaate http://example.com/ to the URL of the page you want to open in the new tab
 	            var win = window.open('http://example.com/', '_blank');
 				if (win) {
 				    //Browser has allowed it to be opened
@@ -21,6 +22,7 @@
 				    //Browser has blocked it
 				    alert('Please allow popups for this website, and then refresh this page.');
 				}
+			// IMPORTANT: 3200 below means that the code will wait 3.2 seconds before opening the new tab. You can change it to a timeframe of your choice. e.g. 5000 for 5 seconds.
 
 	        }, 3200);
 
